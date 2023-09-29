@@ -7,7 +7,7 @@ const port = process.env.PORT || 3000;
 // Function to scrape the HTML content from a single URL
 async function scrapeHTML(url) {
   const browser = await puppeteer.launch({
-    headless: 'false'
+    headless:'new'
   });
   const page = await browser.newPage();
 
