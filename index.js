@@ -15,7 +15,7 @@ async function scrapeHTML(url) {
   await page.goto(url, { timeout: 90000 }); // 60 seconds
 
   // Extract the value from the span element with the specified ID
-  const value = await page.$eval('#inp_nse > div > div.inindi_price.testingClass > div > div.indimprice > div.inprice1 > span', (element) => {
+  const value = await page.$eval('#sp_val', (element) => {
     return element.getAttribute('data-numberanimate-value');
   });
 
